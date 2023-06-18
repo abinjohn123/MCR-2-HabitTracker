@@ -26,6 +26,7 @@ export const HabitModal = ({ setIsModalOpen, currentHabit = null }) => {
       taskData.id = uuid();
       setHabits((habits) => [...habits, taskData]);
     }
+    setIsModalOpen(false);
   };
 
   useEffect(() => nameInputRef.current.focus(), []);
@@ -60,11 +61,17 @@ export const HabitModal = ({ setIsModalOpen, currentHabit = null }) => {
             name="name"
             required
             ref={nameInputRef}
+            defaultValue={currentHabit ? currentHabit.name : ''}
           />
         </label>
         <label>
           <span className="label-text">Repeat</span>
-          <select className="form-input" name="repeat" required>
+          <select
+            className="form-input"
+            name="repeat"
+            required
+            defaultValue={currentHabit ? currentHabit.repeat : ''}
+          >
             <option value="daily">Daily</option>
             <option value="weekly">Weekly</option>
             <option value="monthly">Monthly</option>
@@ -72,7 +79,12 @@ export const HabitModal = ({ setIsModalOpen, currentHabit = null }) => {
         </label>
         <label>
           <span className="label-text">Goal</span>
-          <select className="form-input" name="goal" required>
+          <select
+            className="form-input"
+            name="goal"
+            required
+            defaultValue={currentHabit ? currentHabit.goal : ''}
+          >
             <option value="once">1 time</option>
             <option value="twice">2 times</option>
             <option value="thrice">3 times</option>
@@ -80,7 +92,12 @@ export const HabitModal = ({ setIsModalOpen, currentHabit = null }) => {
         </label>
         <label>
           <span className="label-text">Time of day</span>
-          <select className="form-input" name="time_of_day" required>
+          <select
+            className="form-input"
+            name="time_of_day"
+            required
+            defaultValue={currentHabit ? currentHabit.time_of_day : ''}
+          >
             <option value="morning">Morning</option>
             <option value="afternoon">Afternoon</option>
             <option value="evening">Evening</option>
@@ -88,7 +105,12 @@ export const HabitModal = ({ setIsModalOpen, currentHabit = null }) => {
         </label>
         <label>
           <span className="label-text">Start date</span>
-          <select className="form-input" name="start_date" required>
+          <select
+            className="form-input"
+            name="start_date"
+            required
+            defaultValue={currentHabit ? currentHabit.start_date : ''}
+          >
             <option value="today">Today</option>
             <option value="tomorrow">Tomorrow</option>
             <option value="day_after">Day after</option>
