@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid';
 import { useAppContext } from '../AppContext';
 import './modal.scss';
 
-export const TaskModal = ({ setIsModalOpen, currentHabit = null }) => {
+export const HabitModal = ({ setIsModalOpen, currentHabit = null }) => {
   const { setHabits } = useAppContext();
   const formRef = useRef(null);
   const nameInputRef = useRef(null);

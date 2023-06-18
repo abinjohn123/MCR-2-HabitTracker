@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import '../app.scss';
 
-import { TaskModal } from './TaskModal';
+import { HabitModal } from './HabitEntryModal';
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,7 +16,7 @@ const Home = () => {
         </button>
       </header>
 
-      {isModalOpen && <TaskModal setIsModalOpen={setIsModalOpen} />}
+      {isModalOpen && <HabitModal setIsModalOpen={setIsModalOpen} />}
     </>
   );
 };
