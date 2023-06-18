@@ -1,5 +1,17 @@
+import { useState } from 'react';
+
+import '../app.scss';
+
+import { TaskModal } from './TaskModal';
+
 const Home = () => {
-  return <h1>This is home</h1>;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  return (
+    <>
+      <button onClick={() => setIsModalOpen(true)}>Add task</button>
+      {isModalOpen && <TaskModal setIsModalOpen={setIsModalOpen} />}
+    </>
+  );
 };
 
 export default Home;
