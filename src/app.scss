@@ -10,26 +10,60 @@
     color: #222736;
     font-weight: 700;
   }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .back-icon {
+    height: 24px;
+    stroke: #a6afcd;
+    transition: stroke 0.2s;
+
+    &:hover {
+      stroke: #222736;
+    }
+  }
 }
 
-.btn-task {
+.btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   outline: none;
   border: none;
+  background: none;
   font-family: 'Roboto', sans-serif;
-
-  background-color: #3581ea;
-  color: #fff;
-
   padding: 8px 16px;
   border-radius: 4px;
   transition: background-color 0.3s;
+}
+
+.btn-task {
+  background-color: #3581ea;
+  color: #fff;
 
   &:hover {
     background-color: #508fe6;
+  }
+}
+
+.btn-archive {
+  border: 1px solid #3581ea;
+
+  &:hover {
+    background-color: #e3f2ff;
   }
 }
 

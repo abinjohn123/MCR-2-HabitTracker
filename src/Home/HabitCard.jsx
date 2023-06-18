@@ -24,7 +24,7 @@ export const HabitCard = ({ habit, setIsModalOpen, currentHabit }) => {
     setHabits((habits) =>
       habits.map((eachHabit) =>
         eachHabit.id === habit.id
-          ? { ...eachHabit, isArchive: true }
+          ? { ...eachHabit, isArchive: !eachHabit.isArchive }
           : eachHabit
       )
     );
