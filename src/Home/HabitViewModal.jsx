@@ -41,7 +41,7 @@ export const HabitViewModal = ({ setIsModalOpen, habit }) => {
         </div>
         <div className="view-form">
           <span className="label-text">Start date</span>
-          <span className="form-input">{habit.repeat}</span>
+          <span className="form-input">{habit.start_date}</span>
         </div>
       </div>
     </div>
