@@ -1,0 +1,33 @@
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #222736;
+  padding: 8px 0;
+
+  h1 {
+    color: #222736;
+    font-weight: 700;
+  }
+}
+
+.btn-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+
+  background-color: #3581ea;
+  color: #fff;
+
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #508fe6;
+  }
+}
