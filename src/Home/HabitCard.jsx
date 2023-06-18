@@ -39,7 +39,7 @@ export const HabitCard = ({ habit, setIsModalOpen, currentHabit }) => {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            class="card-icon"
+            className="card-icon"
           >
             <path
               strokeLinecap="round"
@@ -55,7 +55,7 @@ export const HabitCard = ({ habit, setIsModalOpen, currentHabit }) => {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            class="card-icon"
+            className="card-icon"
           >
             <path
               strokeLinecap="round"
@@ -71,7 +71,7 @@ export const HabitCard = ({ habit, setIsModalOpen, currentHabit }) => {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            class="card-icon"
+            className="card-icon"
           >
             <path
               strokeLinecap="round"
