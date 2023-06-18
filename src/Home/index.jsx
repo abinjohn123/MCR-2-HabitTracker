@@ -27,10 +27,10 @@ const Home = () => {
             onClick={() => navigate('/archive')}
             className="btn btn-archive"
           >
-            View archives
+            View archive
           </button>
           <button onClick={handleNewHabit} className="btn btn-task">
-            Add task
+            Add new habit
           </button>
         </div>
       </header>
