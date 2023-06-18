@@ -13,17 +13,20 @@ export const HabitModal = ({ setIsModalOpen, currentHabit = null }) => {
     e.preventDefault();
     const formData = new FormData(formRef.current);
 
-    const taskData = { isArchive: false };
+    const taskData = {};
     for (const entry of formData.entries()) taskData[entry[0]] = entry[1];
 
     if (currentHabit) {
       setHabits((habits) =>
         habits.map((habit) =>
-          habit.id === currentHabit.id ? { ...currentHabit, taskData } : habit
+          habit.id === currentHabit.id
+            ? { ...currentHabit, ...taskData }
+            : habit
         )
       );
     } else {
       taskData.id = uuid();
+      taskData.isArchive = false;
       setHabits((habits) => [...habits, taskData]);
     }
     setIsModalOpen(false);
